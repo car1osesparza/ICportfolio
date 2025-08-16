@@ -1,0 +1,214 @@
+---
+import CaseStudyHeader from "../components/CaseStudyHeader.astro";
+import CaseStudyFooter from "../components/CaseStudyFooter.astro";
+import { siteConfig } from "../config";
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Building a Mobile MVP From Scratch - Case Study" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Building a Mobile MVP From Scratch - {siteConfig.name}</title>
+  </head>
+  <body>
+    <CaseStudyHeader />
+    
+    <main class="pt-24 pb-16">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8">
+        <!-- Back to projects link -->
+        <div class="mb-8">
+          <a 
+            href="/#projects" 
+            class="inline-flex items-center text-gray-600 hover:text-black transition-colors font-medium"
+          >
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            Back to Projects
+          </a>
+        </div>
+
+        <!-- Project Header -->
+        <header class="mb-16">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16">
+            <!-- Project Title and Description -->
+            <div class="lg:col-span-2">
+              <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                City Ciné
+              </h1>
+              <p class="text-xl text-gray-600 mb-8">
+                Building a Mobile MVP From Scratch
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
+                  Product Design & Development
+                </span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
+                  Mobile-First UX Design
+                </span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
+                  WordPress Development
+                </span>
+              </div>
+            </div>
+
+            <!-- Metadata -->
+            <div class="lg:col-span-1">
+              <div class="space-y-6">
+                <div class="border-b border-gray-200 pb-4">
+                  <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wide mb-2">Role</h3>
+                  <p class="text-base text-gray-700">Product Designer + Developer</p>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-4">
+                  <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wide mb-2">Year</h3>
+                  <p class="text-base text-gray-700">2015</p>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-4">
+                  <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wide mb-2">Scope</h3>
+                  <p class="text-base text-gray-700">MVP development, content modeling, WordPress backend</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Case Study Content -->
+        <article class="prose prose-lg max-w-none">
+          <section class="mb-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">The Challenge</h2>
+            <p class="text-gray-700 mb-4">
+              Every summer in New York City, there are close to 200 free, outdoor movie screenings. 
+              Some are put on by the parks department, some by non-profits, and others by independent venues. 
+              Some screenings might make their way into the pages of Time Out, but there was no single source 
+              for discovering a screening near you, and certainly not anything well designed or mobile-based.
+            </p>
+            <p class="text-gray-700">
+              Every summer, New Yorkers search for free outdoor movies—but the data lives across broken 
+              municipal websites, nonprofit calendars, and outdated PDFs. I knew the city—New Yorkers!—deserved better.
+            </p>
+          </section>
+
+          <section class="mb-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">My Process</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">1. Problem Identification</h3>
+                <p class="text-gray-700">
+                  As an early independent project for Field Studios, the creative agency I ran with Saman Maydani 
+                  for 5 years, we got to work building City Ciné to solve this civic pain point.
+                </p>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">2. Content Modeling</h3>
+                <p class="text-gray-700">
+                  I created a simple content model that mirrored how users plan: by location, by date, or by movie. 
+                  This intuitive structure made it easy for users to find what they were looking for.
+                </p>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">3. End-to-End Development</h3>
+                <p class="text-gray-700">
+                  Data was collected manually from the Parks Department and indie presenters, then structured into 
+                  a custom WordPress backend. I designed and developed the experience end-to-end, using field-tested 
+                  UX patterns and a branded identity inspired by French arthouse cinema.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="mb-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Key Outcomes</h2>
+            <ul class="space-y-4 text-gray-700">
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span>Hundreds of users in the first season, shared by local orgs and blogs</span>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span>Reduced frustration in a previously painful info-seeking experience</span>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span>Product validated needs without paid ads or SEO</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="mb-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Lessons Learned</h2>
+            <p class="text-gray-700 mb-4">
+              City Ciné was built fast, tested live, and designed to solve a real civic pain point. 
+              It wasn't hypothetical UX—it was shipping a useful thing and watching people use it.
+            </p>
+            <p class="text-gray-700">
+              The project demonstrated the power of identifying real user needs and building solutions 
+              that address them directly. By focusing on a specific, underserved audience and creating 
+              a mobile-first experience, we were able to validate the concept quickly and gain organic adoption.
+            </p>
+          </section>
+
+          <!-- Project Images -->
+          <section class="mb-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Project Images</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="bg-gray-100 rounded-lg overflow-hidden">
+                <img 
+                  src="/images/case-studies/citycine1.jpg" 
+                  alt="City Ciné desktop site header"
+                  class="w-full h-64 object-cover"
+                />
+                <div class="p-4">
+                  <p class="text-gray-600 text-sm">Desktop site header</p>
+                </div>
+              </div>
+              <div class="bg-gray-100 rounded-lg overflow-hidden">
+                <img 
+                  src="/images/case-studies/citycine2.jpg" 
+                  alt="iPhone 4 mockup set (3 UX examples)"
+                  class="w-full h-64 object-cover"
+                />
+                <div class="p-4">
+                  <p class="text-gray-600 text-sm">iPhone 4 mockup set (3 UX examples)</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <!-- Navigation -->
+        <nav class="mt-16 pt-8 border-t border-gray-200">
+          <div class="flex justify-between items-center">
+            <a 
+              href="/garyhill" 
+              class="text-gray-600 hover:text-black transition-colors font-medium"
+            >
+              ← Previous: Gary Hill
+            </a>
+            <div class="flex gap-4">
+              <a 
+                href="/callisto" 
+                class="text-gray-600 hover:text-black transition-colors font-medium"
+              >
+                Next: UX Leadership →
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </main>
+
+    <CaseStudyFooter />
+  </body>
+</html> 
