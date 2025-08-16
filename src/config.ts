@@ -2,23 +2,22 @@ export const siteConfig = {
   name: "Carlos Esparza",
   title: "Design Systems & UX Strategy for Scaling Teams",
   description: "Design portfolio site of Carlos Esparza",
-  accentColor: "#1d4ed8",
+  accentColor: "#ff1493",
   social: {
-    email: "your-email@example.com",
+    email: "hi@carlosesparza.com",
     linkedin: "https://www.linkedin.com/in/cesparza/",
     twitter: "https://www.threads.com/@c.esparza.run",
-    github: "",
   },
   aboutMe:
     "I’m a design systems and UX strategy lead with roots in web, publishing, and teaching. I started by launching a record label in high school and creating everything it needed, from album art to an MP3 player in ActionScript. Since then, I’ve taught design, built content platforms, scaled design operations in a 50+ person org, and led UX for public-facing sites and MVPs. My work blends creative direction with product-minded systems.",
-  skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
+  skills: ["UX Strategy", "Design Systems", "Accessibility", "Content Design", "DesignOps", "Team Leadership"],
   projects: [
     {
-      name: "IA/UX Clarity for Multi-Stakeholder Org",
+      name: "Gary Hill Artist Website",
       description:
-        "Redesigned a nonprofit site to reduce support load and make key user paths frictionless.",
-      link: "/pilchuck",
-      skills: ["IA & UX Prioritization", "Multi-Audience Design", "Conversion-Focused Web Structure"],
+        "Designed a pioneering artist's catalog for the web to serve curators, researchers, and students.",
+      link: "/garyhill",
+      skills: ["Web Design & Development", "Content Architecture", "User Research & UX Design"],
     },
     {
       name: "Pain Point to Product: A Summer UX Experiment",
