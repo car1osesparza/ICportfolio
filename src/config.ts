@@ -13,11 +13,15 @@ export const siteConfig = {
   skills: ["UX Strategy", "Design Systems", "Accessibility", "Content Design", "DesignOps", "Team Leadership"],
   projects: [
     {
-      name: "Gary Hill Artist Website",
+      name: "Verified Athletics Design System & Brand Refresh",
       description:
-        "Designed a pioneering artist's catalog for the web to serve curators, researchers, and students.",
-      link: "/garyhill",
-      skills: ["Web Design & Development", "Content Architecture", "User Research & UX Design"],
+        "Built the first cohesive design and brand system for a growing SaaS platform, unifying three recruiter dashboards and modernizing the company’s identity ahead of a major product launch.",
+      link: "/verified-athletics",
+      skills: [
+        "Design Systems & Operations",
+        "Product Design & UX Architecture",
+        "Brand Identity & Design–Dev Alignment",
+      ],
     },
     {
       name: "Pain Point to Product: A Summer UX Experiment",
