@@ -33,11 +33,11 @@ export const siteConfig = {
       ],
     },
     {
-      label: "Publishing",
+      label: "Creative Direction at Scale",
       items: [
         {
           links: [
-            { label: "Creative Direction in Publishing", href: "/creative-direction-in-publishing" },
+            { label: "Rockridge Press + Broadleaf Books", href: "/creative-direction-in-publishing" },
           ],
         },
       ],
