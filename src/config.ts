@@ -55,25 +55,26 @@ export const siteConfig = {
   experience: [
     {
       company: "Broadleaf Books",
-      title: "Lead Creative / Art Director",
+      title: "Art Director",
       dateRange: "2022–Present",
       location: "Remote",
       bullets: [
-        "Lead creative for Broadleaf Books (~$2.5M annual revenue), partnering with publishing leadership on every title to develop positioning, naming, subtitling, and visual direction as interconnected parts of product development.",
-        "Directed the creative for 70+ annual book launches, establishing the visual direction that informed marketing campaigns, sales materials, and downstream promotional assets.",
-        "Built planning systems reducing strategy-to-brief time from nine days to two.",
-        "Pioneered iterative cover testing using print-on-demand infrastructure.",
+        "Partner with the Publisher, Sales Director, and Marketing Director on every title to develop positioning, naming, subtitling, and visual direction as interconnected parts of product development.",
+        "Direct the creative for 70+ annual book launches, establishing the visual direction that informs marketing campaigns, sales materials, and downstream promotional assets.",
+        "Built centralized planning systems that reduced the time from strategy meeting to actionable creative brief from nine days to two.",
+        "Pioneered iterative cover testing using print-on-demand infrastructure, expanding experimentation within traditional publishing.",
       ],
     },
     {
       company: "Callisto Media",
-      title: "Lead UX Designer / Design Operations Lead",
+      title: "Senior Art Director / Design Operations Lead",
       dateRange: "2019–2022",
       location: "Remote",
       bullets: [
-        "Grew into Design Operations leadership while serving as Lead UX Designer during 10× company growth.",
-        "Scaled systems supporting growth from ~15 to 55 designers through onboarding, capacity planning, and workflow infrastructure.",
-        "Initiated iterative design experiments including cover A/B testing.",
+        "Expanded from Senior Art Director into Design Operations leadership during a period of 10× company growth, helping scale the design organization from roughly 15 to 55 designers.",
+        "Built onboarding, capacity planning, and workflow systems that increased organizational visibility and creative throughput.",
+        "Developed reusable layout systems and shared component libraries that reduced repetitive production work and improved design consistency.",
+        "Initiated iterative cover testing and creative experimentation programs that produced measurable sales improvements.",
       ],
     },
     {
@@ -82,9 +83,10 @@ export const siteConfig = {
       dateRange: "2025–2026",
       location: "Remote",
       bullets: [
-        "Conducted brand discovery identifying positioning and conversion challenges that led to a comprehensive visual rebrand.",
-        "Redesigned the public website and built a component-based design system for the web application.",
-        "Delivered production-ready UI code through Cursor and Next.js.",
+        "Conducted independent discovery identifying brand and conversion challenges, presenting strategic recommendations that led to a comprehensive visual rebrand.",
+        "Redesigned the public website and customer experience to improve clarity and support sales conversion.",
+        "Built a component-based design system for the web application, unifying three previously disconnected dashboards into a coherent visual architecture.",
+        "Delivered production-ready UI code through Cursor and Next.js while collaborating directly with engineering through Git.",
       ],
     },
     {
