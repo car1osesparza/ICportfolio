@@ -3,6 +3,9 @@ import CaseStudyHeader from "../components/CaseStudyHeader.astro";
 import CaseStudyFooter from "../components/CaseStudyFooter.astro";
 import { siteConfig } from "../config";
 import "../styles/global.css";
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+const img = (path: string) => `${base}${path.replace(/^\//, "")}`;
 ---
 
 <html lang="en">
@@ -11,192 +14,140 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content="Establishing a design foundation for a growing B2B SaaS platform - Case Study" />
+    <meta
+      name="description"
+      content="Brand strategy, identity, product experience, and design systems for an early-stage sports technology startup."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-    <title>Establishing a Design Foundation for Verified Athletics - {siteConfig.name}</title>
+    <title>Verified Athletics — {siteConfig.name}</title>
   </head>
   <body>
     <CaseStudyHeader />
-    
+
     <main class="pt-24 pb-16">
       <div class="max-w-4xl mx-auto px-6 lg:px-8">
-        <!-- Back to projects link -->
         <div class="mb-8">
-          <a 
-            href="../#projects" 
+          <a
+            href={`${base}#work`}
             class="inline-flex items-center text-gray-600 hover:text-black transition-colors font-medium"
           >
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
             </svg>
-            Back to Projects
+            Back to Work
           </a>
         </div>
 
-        <!-- Project Header -->
         <header class="mb-16">
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16">
-            <!-- Project Title and Description -->
-            <div class="lg:col-span-2">
-              <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Verified Athletics
-              </h1>
-              <p class="text-xl text-gray-600 mb-8">
-                Establishing a design foundation for a growing B2B SaaS platform
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-pink-100 text-pink-800 text-sm font-medium rounded-full">
-                  Design Systems & Operations
-                </span>
-                <span class="px-3 py-1 bg-pink-100 text-pink-800 text-sm font-medium rounded-full">
-                  Product Design & UX Architecture
-                </span>
-                <span class="px-3 py-1 bg-pink-100 text-pink-800 text-sm font-medium rounded-full">
-                  Brand Identity & Design–Dev Alignment
-                </span>
-              </div>
-            </div>
-
-            <!-- Metadata -->
-            <div class="lg:col-span-1">
-              <div class="space-y-6">
-                <div class="border-b border-gray-200 pb-4">
-                  <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wide mb-2">Role</h3>
-                  <p class="text-base text-gray-700">Design Systems & Product Lead</p>
-                </div>
-                
-                <div class="border-b border-gray-200 pb-4">
-                  <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wide mb-2">Timeline</h3>
-                  <p class="text-base text-gray-700">2024–2025</p>
-                </div>
-                
-                <div class="border-b border-gray-200 pb-4">
-                  <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wide mb-2">Scope</h3>
-                  <p class="text-base text-gray-700">Design system implementation, multi-dashboard integration, brand refresh</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Verified Athletics</h1>
+          <p class="text-xl text-gray-600">
+            Brand strategy, identity, product experience, and design systems for an early-stage sports technology startup.
+          </p>
         </header>
 
-        <!-- First Image - Full Width Below Scope -->
-        <div class="mb-16">
-          <img 
-            src="/images/case-studies/verified-athletics-brand.jpg" 
-            alt="Old and refreshed Verified Athletics logos" 
-            class="w-full rounded-lg"
-          />
-        </div>
-
-        <!-- Case Study Content -->
         <article class="prose prose-lg max-w-none">
-          <section class="mb-16">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Verified Athletics</h2>
-            <p class="text-gray-700 mb-4">
-              Verified Athletics had been building a data platform for college recruiters for eight years — without a cohesive design system. Multiple dashboards, inconsistent styles, and duplicated code were slowing the team down.
-            </p>
-            <p class="text-gray-700">
-              When I joined, another designer had been contributing UI work for several months, focused primarily on page-level feature design. I entered to address the broader structural issues — unifying the product experience, building a sustainable system underneath it, and leading the brand refresh that would tie product and marketing together.
-            </p>
-            <p class="text-gray-700 mt-4">
-              The immediate goal was pragmatic: launch new features that merged three separate recruiter dashboards into one. Once that shipped, I shifted to branding — preparing a refreshed identity ahead of their January trade show while ensuring the new design language would extend directly into the evolving product.
-            </p>
-          </section>
+          <p class="text-gray-700 mb-4">
+            Verified Athletics had been building product for eight years without a design system underneath any of it: three disconnected dashboards, a stock logo, no visual language tying the product to the marketing site. As fractional creative director, I led the brand strategy, identity design, product experience, and design system work that the company needed but hadn't yet prioritized.
+          </p>
+          <p class="text-gray-700 mb-8">
+            The brand gap was the first thing I went after. I ran an independent discovery process, identified where the identity was working against them, and secured stakeholder buy-in for a full visual rebrand: new logo, color system, and identity framework built to scale into the product as the company grew.
+          </p>
 
-          <section class="mb-16">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Making decisions with limited input</h2>
-            <p class="text-gray-700">
-              With no design documentation or governance, I established a fast, transparent workflow. Figma served as the main decision space for UX feedback, while inline code comments and <code>roadmap.md</code> notes in Cursor captured rationale for each design change. When data was limited, I optimized for scalability — every decision had to reduce future rework and fit within a maintainable system.
-            </p>
-          </section>
-
-          <section class="mb-16">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Prioritization</h2>
-            <p class="text-gray-700">
-              The founder’s immediate pain was maintaining different site versions for each sport — costly and unsustainable. I prioritized unifying those experiences first, designing adaptable layouts and shared components that supported all user types. Once stable, we tackled the brand: not for aesthetics, but to create cohesion between product and marketing and to prepare consistent assets for the upcoming trade show.
-            </p>
-          </section>
-
-          <section class="mb-16">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Communicating with non-designers</h2>
-            <p class="text-gray-700">
-              Most collaboration happened directly in the dev workflow. I shipped updates through Git branches with design intent embedded as code comments Cursor could interpret.
-            </p>
-          </section>
-
-          <section class="mb-16">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Constraints</h2>
-            <ul class="space-y-4 text-gray-700">
-              <li class="flex items-start"><span class="w-2 h-2 bg-pink-600 rounded-full mt-2 mr-3 flex-shrink-0"></span><span>Time: MVP and rebrand had to land before a major trade show.</span></li>
-              <li class="flex items-start"><span class="w-2 h-2 bg-pink-600 rounded-full mt-2 mr-3 flex-shrink-0"></span><span>Legacy sprawl: Three overlapping dashboards to merge quickly.</span></li>
-              <li class="flex items-start"><span class="w-2 h-2 bg-pink-600 rounded-full mt-2 mr-3 flex-shrink-0"></span><span>No documentation: Every standard had to be reverse-engineered.</span></li>
-              <li class="flex items-start"><span class="w-2 h-2 bg-pink-600 rounded-full mt-2 mr-3 flex-shrink-0"></span><span>Lean team: One founder/PM, acting as Cursor developer, two designers working asynchronously.</span></li>
-              <li class="flex items-start"><span class="w-2 h-2 bg-pink-600 rounded-full mt-2 mr-3 flex-shrink-0"></span><span>New toolchain: Designing directly in Cursor and Git for real-time parity.</span></li>
-            </ul>
-          </section>
-
-          <!-- Additional Project Images -->
-          <section class="mb-16">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Project Images</h2>
-            <div class="space-y-8">
-              <div>
-                <img 
-                  src="/images/case-studies/verified-athletics-dashboard.jpg" 
-                  alt="Figma file showing structured component sets and responsive patterns" 
-                  class="w-full rounded-lg"
-                />
-                <p class="text-gray-600 text-sm mt-2">Systemizing the product UI inside Figma with component sets, variables, and shared filters.</p>
-              </div>
-              <div>
-                <img 
-                  src="/images/case-studies/verified-athletics-site.jpg" 
-                  alt="Before and after comparison of the Verified Athletics marketing site" 
-                  class="w-full rounded-lg"
-                />
-                <p class="text-gray-600 text-sm mt-2">Reimagined marketing pages aligning the refreshed brand with product storytelling.</p>
-              </div>
+          <figure class="not-prose mb-16">
+            <!-- Mobile: stacked -->
+            <div class="flex flex-col gap-4 md:hidden">
+              <img
+                src={img("images/case-studies/verified-athletics/brand-logo.png")}
+                alt="Verified Athletics logo construction and scale guidelines"
+                class="w-full rounded-lg shadow-md border border-gray-200/80 bg-white"
+              />
+              <img
+                src={img("images/case-studies/verified-athletics/brand-wordmark.png")}
+                alt="Verified Athletics wordmark typography and customization details"
+                class="w-full rounded-lg shadow-md border border-gray-200/80 bg-white"
+              />
+              <img
+                src={img("images/case-studies/verified-athletics/brand-lockups.png")}
+                alt="Verified Athletics logo lockup variations"
+                class="w-full rounded-lg shadow-md border border-gray-200/80 bg-white"
+              />
             </div>
+            <!-- Desktop: overlapping spread, logo in front -->
+            <div class="relative hidden md:block h-[36rem]">
+              <img
+                src={img("images/case-studies/verified-athletics/brand-lockups.png")}
+                alt=""
+                aria-hidden="true"
+                class="absolute bottom-0 left-[10%] w-[68%] rounded-lg shadow-md border border-gray-200/80 bg-white z-10"
+              />
+              <img
+                src={img("images/case-studies/verified-athletics/brand-wordmark.png")}
+                alt=""
+                aria-hidden="true"
+                class="absolute top-[22%] right-0 w-[76%] rounded-lg shadow-lg border border-gray-200/80 bg-white z-20"
+              />
+              <img
+                src={img("images/case-studies/verified-athletics/brand-logo.png")}
+                alt="Verified Athletics brand identity system — logo construction, wordmark, and lockups"
+                class="absolute top-0 left-0 w-[78%] rounded-lg shadow-xl border border-gray-200/80 bg-white z-30"
+              />
+            </div>
+            <figcaption class="text-gray-600 text-sm mt-4">
+              Brand identity system — logo construction, wordmark, and lockups
+            </figcaption>
+          </figure>
+
+          <p class="text-gray-700 mb-4">
+            The sales experience was next. The homepage wasn't converting, and the reasons weren't hard to find once I looked. It was describing features when it needed to be making an argument. I diagnosed the conversion problems, wrote the strategic recommendations, and delivered the new customer-facing site myself, designed in Figma, shipped as production Next.js code through Cursor, merged directly into the engineering repo via Git branches.
+          </p>
+          <p class="text-gray-700 mb-12">
+            Alongside the brand and site work, I built a Figma component library and used it to unify three disconnected product dashboards into a single coherent visual architecture. Part of the brief was migrating users off a recently acquired competitor's product and onto theirs, which was costing them $10,000 a month to keep running in parallel. Shipping UI code directly cut the handoff friction that normally sits between design and engineering, and let me move faster than a traditional design-to-dev process would allow.
+          </p>
+
+          <section class="not-prose space-y-8 mb-4">
+            <figure>
+              <img
+                src={img("images/case-studies/verified-athletics-dashboard.jpg")}
+                alt="Unified product dashboard UI"
+                class="w-full rounded-lg"
+              />
+              <figcaption class="text-gray-600 text-sm mt-2">Unified product dashboard</figcaption>
+            </figure>
+            <figure>
+              <img
+                src={img("images/case-studies/verified-athletics/homepage-before.png")}
+                alt="Verified Athletics homepage before redesign"
+                class="w-full rounded-lg"
+              />
+              <figcaption class="text-gray-600 text-sm mt-2">Homepage — before</figcaption>
+            </figure>
+            <figure>
+              <img
+                src={img("images/case-studies/verified-athletics/homepage-after.png")}
+                alt="Verified Athletics homepage after redesign"
+                class="w-full rounded-lg"
+              />
+              <figcaption class="text-gray-600 text-sm mt-2">Homepage — after</figcaption>
+            </figure>
           </section>
         </article>
 
-          <section class="mb-16">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Outcomes</h2>
-            <ul class="space-y-4 text-gray-700">
-              <li class="flex items-start"><span class="w-2 h-2 bg-pink-600 rounded-full mt-2 mr-3 flex-shrink-0"></span><span>Unified three recruiter dashboards into a single scalable interface.</span></li>
-              <li class="flex items-start"><span class="w-2 h-2 bg-pink-600 rounded-full mt-2 mr-3 flex-shrink-0"></span><span>Implemented a modernized brand system.</span></li>
-              <li class="flex items-start"><span class="w-2 h-2 bg-pink-600 rounded-full mt-2 mr-3 flex-shrink-0"></span><span>Built the company’s first reusable Figma component library and multi-category design tokens to ensure visual and behavioral consistency.</span></li>
-              <li class="flex items-start"><span class="w-2 h-2 bg-pink-600 rounded-full mt-2 mr-3 flex-shrink-0"></span><span>Began developing an internal design-linting framework to flag inconsistencies between Figma and live UI — part of an ongoing effort to maintain design–dev parity.</span></li>
-            </ul>
-          </section>
-
-          <section class="mb-16">
-            <p class="text-gray-700">
-              This project represents the first step toward design maturity for a small SaaS team — turning a fragmented product into a unified system that can scale faster and more consistently.
-            </p>
-          </section>
-
-        <!-- Navigation -->
         <nav class="mt-16 pt-8 border-t border-gray-200">
           <div class="flex justify-between items-center">
-            <a 
-              href="../#projects" 
+            <a href={`${base}aziz`} class="text-gray-600 hover:text-black transition-colors font-medium">
+              ← Aziz
+            </a>
+            <a
+              href={`${base}creative-leadership-at-scale`}
               class="text-gray-600 hover:text-black transition-colors font-medium"
             >
-              ← Back to Projects
+              Next: Creative Leadership at Scale →
             </a>
-            <div class="flex gap-4">
-              <a 
-                href="/citycine" 
-                class="text-gray-600 hover:text-black transition-colors font-medium"
-              >
-                Next: City Ciné →
-              </a>
-            </div>
           </div>
         </nav>
       </div>
@@ -204,4 +155,4 @@ import "../styles/global.css";
 
     <CaseStudyFooter />
   </body>
-</html> 
+</html>

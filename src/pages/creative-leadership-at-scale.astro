@@ -1,0 +1,115 @@
+---
+import CaseStudyHeader from "../components/CaseStudyHeader.astro";
+import CaseStudyFooter from "../components/CaseStudyFooter.astro";
+import { siteConfig } from "../config";
+import "../styles/global.css";
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Building creative operations and design systems at scale — Callisto Media and 1517 Media."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Creative Leadership at Scale — {siteConfig.name}</title>
+  </head>
+  <body>
+    <CaseStudyHeader />
+
+    <main class="pt-24 pb-16">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8">
+        <div class="mb-8">
+          <a
+            href={`${base}#work`}
+            class="inline-flex items-center text-gray-600 hover:text-black transition-colors font-medium"
+          >
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            Back to Work
+          </a>
+        </div>
+
+        <header class="mb-16">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Creative Leadership at Scale
+          </h1>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            There's a version of creative operations that exists to protect process. That's not the version I'm interested in. The systems I've built have always been trying to do one thing: give creative people more room to do better work.
+          </p>
+        </header>
+
+        <article class="prose prose-lg max-w-none">
+          <section class="mb-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Callisto Media, 2019–2022</h2>
+            <p class="text-gray-700 mb-4">
+              I joined when the design org was about fifteen people. By the time I left, it was over fifty, and the company had grown from roughly $10M to $100M in revenue. That kind of growth is genuinely exciting and genuinely hard. Every system that worked at fifteen people starts to show cracks somewhere around thirty.
+            </p>
+            <p class="text-gray-700 mb-4">
+              My job was to stay ahead of the breaking.
+            </p>
+            <p class="text-gray-700 mb-4">
+              I built a two-week onboarding sprint to replace a ramp that had been taking four to five weeks, so new designers could start contributing real work sooner instead of spending a month getting oriented. I created six layout systems mapped to the company's core publishing categories, delivered as InDesign templates with a shared Adobe CC component library. The goal wasn't to constrain how designers worked. It was to eliminate the part of the job that was just solving the same structural problems from scratch every time, so they could spend their energy on the part that actually required judgment.
+            </p>
+            <p class="text-gray-700 mb-4">
+              A capacity model in Airtable and Toggl made workload visible for the first time. Concurrent titles per designer increased from around seven to ten or eleven. Scope changes mid-project, which had been affecting roughly thirty percent of active titles, became rare exceptions instead of a background condition everyone had learned to absorb.
+            </p>
+            <p class="text-gray-700 mb-4">
+              I also initiated a cover A/B testing program using the company's print-on-demand infrastructure. Publishing almost never gets to run iterative creative tests; the economics don't allow it. This was one of the few contexts where it was possible, and it produced double-digit sales lifts across multiple categories.
+            </p>
+            <p class="text-gray-700">
+              The systems I built outlasted the team that built them. That's usually the goal.
+            </p>
+          </section>
+
+          <section class="mb-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">1517 Media, 2022–Present</h2>
+            <p class="text-gray-700 mb-4">
+              1517 is a small religious imprint, about seventy product launches a year across books, curriculum, and digital content. I'm the sole art director. There's no creative layer between me and the publisher, so I'm responsible for the quality of everything visual that leaves the organization.
+            </p>
+            <p class="text-gray-700 mb-4">
+              I brief and manage external designers. I art direct illustrators across a roster of freelance talent. I sit at the strategy table with the publisher, sales director, and marketing director upstream of visual development, helping shape product naming, subtitling, and market positioning before a brief is written. The creative decisions I'm making at 1517 aren't downstream of the business strategy. They're part of it.
+            </p>
+            <p class="text-gray-700 mb-4">
+              When I arrived, three conflicting documentation systems had stretched the time between a strategy meeting and an actionable creative brief to nine days. I replaced them with one living document in SharePoint. The cycle dropped to two days. Not by adding tools, but by removing them. The right solution to a coordination problem isn't always more infrastructure.
+            </p>
+            <p class="text-gray-700">
+              At the annual sales conference, the creative work was called out by name as directly enabling the sales team's effectiveness. That's the part I'm most proud of. The books sell because the covers work. The covers work because the process works.
+            </p>
+          </section>
+        </article>
+
+        <nav class="mt-16 pt-8 border-t border-gray-200">
+          <div class="flex justify-between items-center">
+            <a
+              href={`${base}verified-athletics`}
+              class="text-gray-600 hover:text-black transition-colors font-medium"
+            >
+              ← Verified Athletics
+            </a>
+            <a
+              href={`${base}creative-direction-in-publishing`}
+              class="text-gray-600 hover:text-black transition-colors font-medium"
+            >
+              Next: Creative Direction in Publishing →
+            </a>
+          </div>
+        </nav>
+      </div>
+    </main>
+
+    <CaseStudyFooter />
+  </body>
+</html>

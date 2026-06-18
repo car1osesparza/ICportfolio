@@ -1,0 +1,109 @@
+---
+import CaseStudyHeader from "../components/CaseStudyHeader.astro";
+import CaseStudyFooter from "../components/CaseStudyFooter.astro";
+import { siteConfig } from "../config";
+import "../styles/global.css";
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+const img = (path: string) => `${base}${path.replace(/^\//, "")}`;
+
+const covers = [
+  { src: "/images/publishing/9781506486277c.jpg", alt: "Book cover" },
+  { src: "/images/publishing/9781506493374c.jpg", alt: "Book cover" },
+  { src: "/images/publishing/9781506499147c.jpg", alt: "Book cover" },
+  { src: "/images/publishing/9798341900936.jpg", alt: "Book cover" },
+  { src: "/images/publishing/9798889830757c.jpg", alt: "Book cover" },
+  { src: "/images/publishing/EmptyWords.jpg", alt: "Empty Words — book cover" },
+  { src: "/images/publishing/Likenes_F2.jpg", alt: "Likeness — book cover" },
+  { src: "/images/publishing/i-mafan.jpg", alt: "I Mafan — book cover" },
+  { src: "/images/publishing/shy_F1.jpg", alt: "Shy — book cover" },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Seven years as a creative director in publishing, fourteen years designing covers."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Creative Direction in Publishing — {siteConfig.name}</title>
+  </head>
+  <body>
+    <CaseStudyHeader />
+
+    <main class="pt-24 pb-16">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8">
+        <div class="mb-8">
+          <a
+            href={`${base}#work`}
+            class="inline-flex items-center text-gray-600 hover:text-black transition-colors font-medium"
+          >
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            Back to Work
+          </a>
+        </div>
+
+        <header class="mb-16">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Creative Direction in Publishing
+          </h1>
+          <p class="text-xl text-gray-600">
+            Seven years as a creative director in publishing, fourteen years and counting designing covers.
+          </p>
+        </header>
+
+        <article class="prose prose-lg max-w-none">
+          <p class="text-gray-700 mb-4">
+            Seven years as a creative director in publishing, fourteen years designing covers: fiction, nonfiction, spirituality, business, children's, across roughly seventy annual launches. Every cover sells twice, once to a sales rep pitching it into accounts, then again to the reader picking it off a shelf. The work means directing illustrators, managing vendor relationships, and making creative calls under deadline, at a pace that leaves no room for any single cover to be an afterthought.
+          </p>
+          <p class="text-gray-700 mb-12 italic text-gray-500">
+            Work recognized in LitHub, Casual Optimist, and Paste Magazine.
+          </p>
+
+          <div class="not-prose grid grid-cols-2 sm:grid-cols-3 gap-4">
+            {
+              covers.map((cover) => (
+                <div class="aspect-[2/3] rounded-lg overflow-hidden bg-gray-100">
+                  <img
+                    src={img(cover.src)}
+                    alt={cover.alt}
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              ))
+            }
+          </div>
+        </article>
+
+        <nav class="mt-16 pt-8 border-t border-gray-200">
+          <div class="flex justify-between items-center">
+            <a
+              href={`${base}creative-leadership-at-scale`}
+              class="text-gray-600 hover:text-black transition-colors font-medium"
+            >
+              ← Creative Leadership at Scale
+            </a>
+            <a href={`${base}#work`} class="text-gray-600 hover:text-black transition-colors font-medium">
+              Back to Work →
+            </a>
+          </div>
+        </nav>
+      </div>
+    </main>
+
+    <CaseStudyFooter />
+  </body>
+</html>

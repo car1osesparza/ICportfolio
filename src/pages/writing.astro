@@ -1,0 +1,107 @@
+---
+import CaseStudyHeader from "../components/CaseStudyHeader.astro";
+import CaseStudyFooter from "../components/CaseStudyFooter.astro";
+import { siteConfig } from "../config";
+import { essays } from "../data/essays";
+import "../styles/global.css";
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+const { writing } = siteConfig;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Essays on design, objects, and why any of it matters." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Writing — {siteConfig.name}</title>
+  </head>
+  <body>
+    <CaseStudyHeader />
+
+    <main class="pt-24 pb-16">
+      <div class="max-w-3xl mx-auto px-6 lg:px-8">
+        <div class="mb-8">
+          <a
+            href={`${base}`}
+            class="inline-flex items-center text-gray-600 hover:text-black transition-colors font-medium"
+          >
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            Back to Home
+          </a>
+        </div>
+
+        <header class="mb-16 pb-12 border-b border-gray-200">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Writing</h1>
+          <p class="text-xl text-gray-600 leading-relaxed">{writing.intro}</p>
+
+          <nav class="mt-10" aria-label="Essays">
+            <ul class="space-y-2">
+              {
+                essays.map((essay) => (
+                  <li>
+                    <a
+                      href={`#${essay.slug}`}
+                      class="text-lg font-medium text-gray-900 hover:text-gray-600 transition-colors"
+                    >
+                      {essay.title}
+                    </a>
+                    <span class="text-sm text-gray-400 ml-2">{essay.year}</span>
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
+        </header>
+
+        <div class="space-y-24">
+          {
+            essays.map((essay) => (
+              <article id={essay.slug} class="scroll-mt-28">
+                <header class="mb-10">
+                  <p class="text-sm font-mono text-gray-400 mb-2">{essay.year}</p>
+                  <h2 class="text-3xl md:text-4xl font-bold text-gray-900">{essay.title}</h2>
+                </header>
+
+                <div class="space-y-6">
+                  {
+                    essay.paragraphs.map((paragraph, index) => {
+                      const image = essay.images?.find((img) => img.beforeIndex === index);
+
+                      return (
+                        <>
+                          {image && (
+                            <figure>
+                              <img
+                                src={`${base}${image.src.replace(/^\//, "")}`}
+                                alt={image.alt}
+                                class="w-full rounded-lg"
+                              />
+                            </figure>
+                          )}
+                          <p class="text-lg text-gray-700 leading-relaxed">{paragraph}</p>
+                        </>
+                      );
+                    })
+                  }
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </main>
+
+    <CaseStudyFooter />
+  </body>
+</html>

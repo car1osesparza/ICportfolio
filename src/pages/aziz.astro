@@ -1,0 +1,160 @@
+---
+import CaseStudyHeader from "../components/CaseStudyHeader.astro";
+import CaseStudyFooter from "../components/CaseStudyFooter.astro";
+import { siteConfig } from "../config";
+import "../styles/global.css";
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+const img = (name: string) => `${base}images/case-studies/aziz/${name}`;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Brand identity, packaging, and art direction for a Persian-American granola brand."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Aziz — {siteConfig.name}</title>
+  </head>
+  <body>
+    <CaseStudyHeader />
+
+    <main class="pt-24 pb-16">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8">
+        <div class="mb-8">
+          <a
+            href={`${base}#work`}
+            class="inline-flex items-center text-gray-600 hover:text-black transition-colors font-medium"
+          >
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            Back to Work
+          </a>
+        </div>
+
+        <header class="mb-16">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Aziz</h1>
+          <p class="text-xl text-gray-600">
+            Brand identity, packaging, and art direction for a Persian-American granola brand.
+          </p>
+        </header>
+
+        <article class="prose prose-lg max-w-none">
+          <p class="text-gray-700 mb-4">
+            Saman Maydani had been making granola for nine years before she decided to sell it. Her flavors sit at the intersection of Iranian ingredients (saffron, rose, cardamom, pistachio) and the kind of thing a farmer's market shopper picks up without quite knowing why. She came to me with a name, a timeline, and a clear instinct: it needed to feel like it belonged to two worlds at once without making either one feel like a footnote.
+          </p>
+          <p class="text-gray-700 mb-8">
+            That turned out to be a design problem as much as a cultural one.
+          </p>
+
+          <p class="text-gray-700 mb-4">
+            If Persian script was going to be a genuine feature of the identity, not a decorative gesture, the font choice mattered as much as anything else. A lot of Arabic-script typefaces that feel expressive to native readers come across as ornamental or hard to parse to Western eyes. After a long search we landed on Rabie, which has a roundness and warmth that reads as friendly rather than foreign, paired with Gopher for the English. The two faces work together without competing for attention.
+          </p>
+
+          <figure class="not-prose mb-12">
+            <img
+              src={img("arabic-explorations.png")}
+              alt="Arabic script typeface explorations for the Aziz wordmark"
+              class="w-full rounded-lg"
+            />
+            <figcaption class="text-gray-600 text-sm mt-2">
+              Arabic-script explorations — finding a face that reads as warm, not ornamental
+            </figcaption>
+          </figure>
+
+          <p class="text-gray-700 mb-4">
+            The mark came from a small typographic observation: the "ee" sound in aziz is represented by a dotted letter in both scripts. The logo shares that dot, one point of connection between two languages, two culinary traditions, two people. It's the kind of thing that looks inevitable once you see it, which is usually a sign you've found the right answer.
+          </p>
+
+          <div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <figure>
+              <img
+                src={img("wordmark-dot-detail.png")}
+                alt="Before and after refinement of the shared dot in the Aziz wordmark"
+                class="w-full rounded-lg"
+              />
+              <figcaption class="text-gray-600 text-sm mt-2">
+                The shared dot — one connection point between scripts
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src={img("wordmark-final.png")}
+                alt="Final Aziz wordmark in Arabic and Latin scripts"
+                class="w-full rounded-lg bg-gray-50 p-8"
+              />
+              <figcaption class="text-gray-600 text-sm mt-2">
+                Final wordmark lockup
+              </figcaption>
+            </figure>
+          </div>
+
+          <p class="text-gray-700 mb-4">
+            Each flavor has its own color drawn from the ingredients themselves: the deep gold of saffron, the pink of dried rose petals, the very particular green of a pistachio. Cardamom was the hardest. Its natural palette kept overlapping with the other flavors, until we found the deep purple of a cinnamon fruit, which turned out to carry exactly the right sense of quiet luxury.
+          </p>
+
+          <figure class="not-prose mb-12">
+            <img
+              src={img("colorways.png")}
+              alt="Four flavor color palettes for Aziz granola"
+              class="w-full rounded-lg"
+            />
+            <figcaption class="text-gray-600 text-sm mt-2">
+              Ingredient-driven color system across four flavors
+            </figcaption>
+          </figure>
+
+          <p class="text-gray-700 mb-8">
+            The packaging recommendation was no window, no product photography. Bold color and Persian script as the primary surface. A quote from Hafiz of Shiraz on every bag. The product doesn't need to explain itself, and the packaging shouldn't either.
+          </p>
+
+          <div class="not-prose space-y-8 mb-4">
+            <figure>
+              <img
+                src={img("packaging-saffron-rose.png")}
+                alt="Saffron Rose granola packaging mockup and label design"
+                class="w-full rounded-lg"
+              />
+              <figcaption class="text-gray-600 text-sm mt-2">Saffron Rose</figcaption>
+            </figure>
+            <figure>
+              <img
+                src={img("packaging-cardamom-pecan.png")}
+                alt="Cardamom Pecan granola packaging mockup and label design"
+                class="w-full rounded-lg"
+              />
+              <figcaption class="text-gray-600 text-sm mt-2">Cardamom Pecan</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <nav class="mt-16 pt-8 border-t border-gray-200">
+          <div class="flex justify-between items-center">
+            <a href={`${base}#work`} class="text-gray-600 hover:text-black transition-colors font-medium">
+              ← Back to Work
+            </a>
+            <a
+              href={`${base}verified-athletics`}
+              class="text-gray-600 hover:text-black transition-colors font-medium"
+            >
+              Next: Verified Athletics →
+            </a>
+          </div>
+        </nav>
+      </div>
+    </main>
+
+    <CaseStudyFooter />
+  </body>
+</html>
